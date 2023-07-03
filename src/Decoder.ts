@@ -10,12 +10,12 @@ const STATE_ARRAY = "array";
 const STATE_MAP_KEY = "map_key";
 const STATE_MAP_VALUE = "map_value";
 
-type MapKeyType = string | number;
+type MapKeyType = string | number | bigint;
 
 const isValidMapKeyType = (key: unknown): key is MapKeyType => {
   const keyType = typeof key;
 
-  return keyType === "string" || keyType === "number";
+  return keyType === "string" || keyType === "number" || keyType === "bigint";
 };
 
 type StackMapState = {
