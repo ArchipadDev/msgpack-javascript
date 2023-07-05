@@ -10,7 +10,7 @@ const STATE_ARRAY = "array";
 const STATE_MAP_KEY = "map_key";
 const STATE_MAP_VALUE = "map_value";
 
-type MapKeyType = string | number | bigint;
+type MapKeyType = string | number;
 
 const isValidMapKeyType = (key: unknown): key is MapKeyType => {
   const keyType = typeof key;
