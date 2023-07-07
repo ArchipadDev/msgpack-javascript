@@ -10,7 +10,7 @@ const STATE_ARRAY = "array";
 const STATE_MAP_KEY = "map_key";
 const STATE_MAP_VALUE = "map_value";
 
-type MapKeyType = string | number;
+type MapKeyType = string | number | bigint;
 
 const isValidMapKeyType = (key: unknown): key is MapKeyType => {
   const keyType = typeof key;
@@ -419,6 +419,7 @@ export class Decoder<ContextType = undefined> {
         } else {
           // it must be `state.type === State.MAP_VALUE` here
 
+          // @ts-expect-error
           state.map[state.key!] = object;
           state.readCount++;
 

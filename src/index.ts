@@ -20,6 +20,9 @@ export { Decoder, DecodeError, DataViewIndexOutOfBoundsError };
 import { Encoder } from "./Encoder";
 export { Encoder };
 
+import { IntMode } from './utils/int';
+export { IntMode };
+
 // Utilitiies for Extension Types:
 
 import { ExtensionCodec } from "./ExtensionCodec";
